@@ -1,0 +1,118 @@
+//- Nav item 
+mixin block-items-service(clasecolor, linkUrl, name, imageUrl)
+		a(href=linkUrl class=clasecolor class=['field', 'field--name-link']) 
+			span
+				img(src=imageUrl)
+				= name
+//- Card home
+mixin block-card-service(claseanima, clasecolor, cardtitle)
+	div.card-service.add-animation(class=claseanima)
+		div(class=clasecolor class=['card-title',])
+			div.field.field--name-card-title
+				= cardtitle
+		div.field.field--name-card-body
+			block
+
+//- item sector
+mixin block-items-sector(claseanima, name, imageUrl)
+	li.field.field--name-item-sector.add-animation(class=claseanima)
+		div.item-sector
+			span
+				img(src=imageUrl)
+			span
+				= name
+
+//- Bloque sidebar 
+
+mixin block-sidebar(clasecolor, titulo)
+	div(class=clasecolor class=['block', 'block-sidebar'])
+		div.field.field--name-logo
+			a(href='/') 
+				img(src="../images/logo-iex-dark.svg" alt="logo")
+		div.field.field--name-title 
+			h2= titulo
+		div.field.field--name-desc 
+			block
+		div.field.field--name-redes 
+			a(href='google.com') 
+				img(src="../images/icon-facebook.svg" alt="facebook")
+			a(href='google.com') 
+				img(src="../images/icon-linkedin.svg" alt="twitter")
+
+//****** BOOTSTRAP 4.3  MIXINS
+
+//- accordion
+mixin accordion(id)
+	.accordion(id='accordion' + id)
+		block
+
+//- accordion-item
+mixin accordion-item(type,title,parent,expanded)
+	-var id = title.replace(/\s+/g,"")
+	.card
+		.card-header(id='heading'+ parent )
+			h2.mb-0
+				button(class="field field--name-ac-title btn btn-link collapsed", type="button",  data-toggle="collapse", data-target='#collapse' + parent, aria-expanded="true", aria-controls="collapseOne")
+					= title
+		unless expanded
+			.collapse(id='collapse' + parent, aria-labelledby='heading' + parent, data-parent='#accordionExample')
+				.card-body.field.field--name-ac-body
+					block
+		else
+			.collapse.show(id='collapse' + parent, aria-labelledby='heading' + parent, data-parent='#accordionExample')
+				.card-body.field.field--name-ac-body
+					block
+
+
+//- accordion-item-default
+mixin accordion-item-default(title,parent,expanded)
+	+accordion-item("default",title,parent,expanded)
+		block
+		
+//- accordion-item-primary
+mixin accordion-item-primary(title,parent,expanded)
+	+accordion-item("primary",title,parent,expanded)
+		block
+
+//- accordion-item-info
+mixin accordion-item-info(title,parent,expanded)
+	+accordion-item("info",title,parent,expanded)
+		block
+
+//- accordion-item-success
+mixin accordion-item-success(title,parent,expanded)
+	+accordion-item("success",title,parent,expanded)
+		block
+		
+//- accordion-item-warning
+mixin accordion-item-warning(title,parent,expanded)
+	+accordion-item("warning",title,parent,expanded)
+		block
+		
+//- accordion-item-danger
+mixin accordion-item-danger(title,parent,expanded)
+	+accordion-item("danger",title,parent,expanded)
+		block
+
+
+//- nav
+mixin nav(clasedireccion)
+	ul.nav(class=clasedireccion)
+		block
+
+mixin nav-item(href, item)
+	li.nav-item
+		a.nav-link(href=href) 
+			= item
+
+
+//-card
+mixin card(titlecard)
+	.card
+		.field.field--name-card-title 
+			= titlecard
+		.field.field--name-card-text
+			block
+
+
+

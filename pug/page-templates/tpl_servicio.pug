@@ -1,0 +1,48 @@
+doctype html
+html(lang="es")
+    head
+        meta( charset='utf-8' ) 
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='HUB de Innovación, Educacion, y Extension, un centro para asesorar, cooperar e idear propuestas innovadoras' )
+        link(rel='shortcut icon' href='/images/ueb_favicon.ico' type='image/vnd.microsoft.icon')
+        
+      
+        block title
+            title El titulo de la pagina
+
+        link(href="../css/style.css", rel="stylesheet")
+        link(href="../css/owl.carousel.min.css", rel="stylesheet")
+        link(href="../css/owl.theme.default.min.css", rel="stylesheet")
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+        script( src='//code.jquery.com/jquery-3.3.1.slim.min.js' )
+        body
+
+        //- mixins file
+        include ../template-parts/mixins.pug
+
+        block nabvar
+  
+        //- body block content
+        #main.container-fluid.p-0
+            .row.no-gutters
+                .layout__region.layout__region--content
+                    section.sidebar
+                        .sidebar-sticky
+                            block sidebar
+                    // /.sidebar
+                    section.content
+                        block content
+                    // /.content
+                    block sidebar_footer
+                    block nav_services
+                    block destacado
+                // /.layout__region
+        // /#main  
+                
+        //- Page transitions js
+        include  ../template-parts/js-body-ends.pug

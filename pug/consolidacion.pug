@@ -1,0 +1,34 @@
+extends page-templates/tpl_servicio.pug
+
+block title
+    title Hub iEX Universidad El Bosque - Consolidación
+
+block nabvar
+    include template-parts/navbar.pug
+block sidebar
+    +block-sidebar('acid-blue', 'Consolidación')
+        | Apoyamos  con expertos en psicología, investigación, diseño, gerencia y desarrollo sostenible,  ofrecemos Programas de educación no formal, cursos flexibles y capacitación, actualización y profundización del conocimiento interno de la empresa 
+        Consolidamos la programación  y administración de bases de datos de su empresa.
+
+block sidebar_footer
+    include template-parts/footer-sidebar.pug
+
+block content
+    .field.field--name-img-service
+        img(src="../images/img-default-service.jpg", class="img-fluid", alt="Responsive image")
+    .field.field--name-texto-destacado
+        p Nuestra diversidad permite entenderlo no solo en un área, permitiendonos dar soluciones integrales para el desarrollo  sostenible de su organización, hired by the cinematic genius – is the captive of embarrassingly personalized and disturbingly intrusive, mostly outdoor, interactive advertising.
+
+    +accordion("Example")
+        +accordion-item-primary("Collapsible Group Item #1","0ne","true")
+            p  This is first accordion content
+        +accordion-item-default("Collapsible Group Item #2","Two")
+            |  This is second accordion content
+        +accordion-item-default("Collapsible Group Item #3","Three")
+            |  This is third accordion content
+    .field.field--name-next-service
+        a(class='' href='expansion.html' ) 
+            img(src="../images/arrow-black.svg" alt="Siguiente")
+
+block destacado
+    include template-parts/banner-servicio-footer.pug

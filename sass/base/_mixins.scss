@@ -1,0 +1,85 @@
+// Mixins subtheme
+
+@mixin color-desborde($background: false) {
+    @if $background {background: $background;}
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        background: $background;
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: -1;
+    }
+    &::after {
+        left: auto;
+        right: 100%;
+        width: 100%;
+    }
+    &::before{
+        width: 200%;
+    }
+}
+@mixin color-bg-parts($background: false) {
+    position: relative;
+    &:before{
+        @if $background {background: $background;}
+        content: "";
+        position: absolute;
+        @include size(100%, 5%)
+        top: 0;
+        left: 0;
+    }
+}
+
+@mixin font-set($family: false, $size: false, $colour: false, $lspacing: false,  $lh: false) {
+    @if $family {font-family: $family}
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $lspacing { letter-spacing:  $lspacing; }
+    @if $lh { line-height: $lh; }
+}
+
+@mixin rotate-autor($top: false, $left: false) {
+    @if $top {top: $top;}
+    @if $left { left: $left; }
+    position: absolute;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    transform-origin: top center;
+}
+
+
+@mixin color-desborde-cat($background: false) {
+    @if $background {background: $background;}
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        background: $background;
+        display: block;
+        height: 80%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: -1;
+    }
+    &::after {
+        left: auto;
+        right: 100%;
+        width: 500%;
+    }
+    &::before{
+        width: 500%;
+    }
+}
+
+
+
+
+
+
+

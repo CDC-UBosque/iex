@@ -1,0 +1,415 @@
+// Base 
+@import "../base/variables";
+@import "../base/mixins";
+@import "../base/typography";
+// bootstrap
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+//Gloabal clases
+
+%item-link {
+  color: $color-negro-90;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  &::after{
+	content: '';
+	background: $color-negro-90;
+	@include size(100%, 2px);
+	position: absolute;
+	bottom: -2px;
+	left:0;
+  }
+  &:hover{
+  	text-decoration: none;
+	color: $color-acid-orange;
+  }
+}
+// Animations
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 100%;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@include media-breakpoint-up(md) {
+	%slideInLeft {
+		animation-duration: 1s; /* the duration of the animation */
+		animation-timing-function: ease-in-out; /* how the animation will behave */
+		animation-delay: 0s; /* how long to delay the animation from starting */
+		animation-iteration-count: 1; /* how many times the animation will play */
+		animation-name: slideInLeft;
+	}
+}
+
+// Custom clases
+.acid-blue{
+	background: $color-acid-blue;
+}
+.acid-yellow{
+	background: $color-acid-yellow;
+}
+.acid-green{
+	background: $color-acid-green;
+}
+.acid-orange{
+	background: $color-acid-orange;
+}
+// Custom field
+.field{
+	&--name-logo{
+		margin-bottom: 2rem;
+		img{
+			transform: scale(1);
+			transition: .3s ease-in-out;
+		}
+		&:hover{
+			img{
+				transform: scale(1.1);
+			}
+		}
+	}
+	&--name-title{
+		h2{
+			@include font-set($font-ag-regular, $font-size-50, $color-negro-100, 0,  1);
+			text-transform: uppercase;
+			overflow-wrap: break-word;
+  			word-wrap: break-word;
+		}
+		margin-bottom: 2rem;
+	}
+	&--name-desc{
+		@include font-set($font-lt-regular, $font-size-14, $color-negro-100, 1px,  1.5);
+		position: relative;
+		padding-top:1rem;
+		&::before{
+			content: '';
+			background: $color-negro-90;
+			@include size(50%, 1px);
+			position: absolute;
+			top: 0;
+			left:0;
+		}
+	}
+	&--name-redes{
+		margin-top: 1.5rem;
+		a{
+			margin-right: 0.5rem;
+		}
+	}
+	&--name-fotter-logo{
+		margin-top: 2rem;
+	}
+	&--name-footer-title{
+		@include font-set($font-lt-bold, $font-size-14, $color-negro-100, 1px,  1.5);
+	}
+	&--name-fotter-body{
+		@include font-set($font-lt-regular, $font-size-12, $color-negro-100, 1px,  1.5);
+		span{
+			display: block;
+		}
+		label{
+			margin-bottom: 0;
+			display: block;
+		}
+	}
+	&--name-texto-destacado{
+		@include font-set($font-sf-regular-i, $font-size-base, $color-negro-70, 0,  1.5);
+		position: relative;
+		padding-top: 1rem;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		padding-top: 1rem;
+		&::before{
+			content: '';
+			background: $color-negro-90;
+			@include size(100%, 5px);
+			position: absolute;
+			top: 0;
+			left:0;
+		}
+	}
+	&--name-ac-title{
+		@include font-set($font-ag-black, $font-size-base, $color-negro-90, 0,  1.5);
+		text-transform: uppercase;
+		padding-left: 0;
+		&:hover{
+			color: $color-acid-orange;
+			text-decoration: none;
+		}
+		position: relative;
+		&.btn[aria-expanded="true"]{
+			&::before{
+				content: '';
+				background: $color-negro-90;
+				@include size(15px, 5px);
+				position: absolute;
+				top: -16px;
+				left:0;
+			}
+		}
+		&.btn[aria-expanded="false"]{
+			margin-bottom: 1rem;
+			&::before{
+				content: '+';
+				font-family: 'acherus_grotesqueblack';
+				font-size: 2rem;
+				color: $color-negro-90;
+				position: absolute;
+				top: -35px;
+				left:0;
+			}
+		}
+	}
+	&--name-ac-body{
+		@include font-set($font-lt-regular, $font-size-15, $color-negro-70, 1px,  1.5);
+	}
+	&--name-img-service{
+		position: relative;
+		z-index: -1;
+		@extend %slideInLeft;
+		img{
+			max-height: 500px;
+    		object-fit: cover;
+    		width: 100%;
+		}
+	}
+	&--name-next-service{
+		text-align: right;
+		margin:2rem 0;
+		a{
+			display: inline-block;
+			transition: .3s ease-in-out;
+			padding-right: 30px;
+			&:hover{
+				padding-right: 0px;
+			}
+		}
+	}
+	&--name-banner-body{
+		padding: 2.5rem 0 0 2.5rem;
+		top: 25%;
+		z-index: 2;
+	}
+	&--name-banner-title{
+		@include font-set($font-ag-regular, $font-size-70, $color-acid-orange, 0,  1);
+		text-transform: uppercase;
+	}
+	&--name-banner-subtitle{
+		@include font-set($font-lt-regular, $font-size-20, white, 2px,  1);
+		margin-bottom: 2rem;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	&--name-banner-image{
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		img{
+			max-height: 500px;
+    		object-fit: cover;
+    		width: 100%;
+			margin-left: -30px;
+			transform: scale(1.05);
+			transition: .3s ease-in-out;
+			text-decoration: none
+		}
+		&::before{
+			content: '';
+			@include size(100%, 100%);
+			background: $color-negro-100;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: .3;
+			transition: .3s ease-in-out;
+			z-index: 1;
+		}
+		&:hover{
+			&::before{
+				content: '';
+				@include size(100%, 100%);
+				background: $color-negro-100;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: .6;
+			}
+			img{
+				margin-left: 0;
+			}
+		}
+	}
+	&--name-owl-carousel{
+		img{
+			min-height: 660px;
+			max-height: 660px;
+    		object-fit: cover;
+    		width: 100%;
+		}
+	}
+}
+
+// Contenedores
+.sidebar-footer{
+	padding: 2.5rem 0 0 2.5rem;
+	label{
+		margin-top: 1rem;
+		+a{
+			@extend %item-link;
+		}
+	}
+
+}
+
+
+
+// Bootstrap custom
+.accordion{
+	.card{
+		@include border-radius(0);
+		border:0;
+		border-top: 1px solid $color-negro-10;
+		overflow:inherit;
+		.card-header{
+			background: white;
+			border:0;
+			padding: 0.5rem 0;
+		}
+	}
+}
+
+// Navbar
+.navbar-light{
+	//background: white;
+	.navbar-toggler{
+		border: 0;
+		.close{
+			font-size: 2.5rem;
+		    font-weight: 400;
+		    color: $color-negro-0;
+		    text-shadow: none;
+		    opacity: 1;
+		    padding-right: 4px;
+		    margin-top: -7px;
+		}
+		&.collapsed{
+			>.close{
+				display: none;
+			}
+		}
+		&:not(.collapsed){
+			>.navbar-toggler-icon{
+				display: none;
+			}
+		}
+		&:focus,
+		&:active{
+			outline: none;
+    		box-shadow: none;
+		}
+		.navbar-toggler-icon{
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.9)' stroke-width='4' stroke-linecap='butt' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+		}
+		>.close {
+		    display:inline;
+		}
+	}
+	.navbar-collapse {
+	    position: absolute;
+	    top: 0;
+	    right: -10%;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    padding-bottom: 15px;
+	    width: 0;
+	    transition: width 0.3s ease;
+	    display: block;
+	    background: rgba(0,0,0,.7);
+	    height: 100vh !important;
+	    .navbar-nav{
+	    	text-align: center;
+	    	margin-top: 80px;
+	    	margin-right: 1rem !important;
+	    	.label-link{
+	    		@include font-set($font-ag-regular, $font-size-13, white, 2px,  1);
+	    		text-transform: uppercase;
+	    		margin-top: 1rem;
+	    	}
+	    	.nav-link{
+				@include font-set($font-ag-bold, $font-size-30, white, 0,  1);
+				text-transform: uppercase;
+				padding: 0.7rem 0;
+				position: relative;
+	    		display: inline-block;
+				&:hover{
+				  	&::after{
+						content: '';
+						background: white;
+						@include size(100%, 2px);
+						position: absolute;
+						bottom: 5px;
+						left:0;
+				  	}
+				}
+	    	}
+	    }
+	    &.show{
+		    transition: all 0.3s ease;
+		    display: block;
+		    right: 0;
+		    background: rgba(0,0,0,.7);
+		    width: 100% !important;
+		    height: 100vh;
+		    top: 0px;
+		    z-index: -1;
+
+	    }
+	}
+}
+
+// Responsive
+@include media-breakpoint-down(md) {
+	.field{
+		&--name-logo{
+			margin-bottom: 1rem;
+		}
+		&--name-title{
+			margin-bottom: 1rem;
+		}
+		&--name-banner-image{
+			img{
+				margin-left: 0;
+				transform: scale(1);
+			}
+		}
+		&--name-banner-image{
+			img{
+				min-height: 500px;
+			}
+		}
+		&--name-texto-destacado{
+			padding: 1rem;
+		}
+	}
+	.sidebar-footer{
+		padding: 2.5rem 0 2.5rem 2.5rem
+	}
+	.content{
+		.accordion{
+			padding: 0 1rem;
+		}
+	}
+}
+

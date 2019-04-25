@@ -1,0 +1,20 @@
+/* IMPORTS */
+
+// typography
+@import "base/typography";
+
+// Base variables
+@import "base/variables";
+@import "base/grid";
+@import "base/mixins";
+
+//bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "components/custom-page";
+@import "components/custom-homepage";
+
+// Layout
+@import "layouts/tpl-servicio";
+@import "layouts/tpl-home";

@@ -1,0 +1,82 @@
+extends pug/page-templates/tpl_home.pug
+
+block title
+    title Hub iEX Universidad El Bosque 
+
+block nabvar
+    include pug/template-parts/navbar.pug
+
+block hero
+    include pug/template-parts/banner-hero.pug
+block nav_services
+    ul.nav-services
+        li
+            +block-items-service('acid-yellow', 'servicios/startup.html', 'startup', 'images/logo-iex-item.svg')
+        li
+            +block-items-service('acid-blue', 'servicios/consolidacion.html', 'Consolidación', 'images/logo-iex-item.svg')
+        li
+            +block-items-service('acid-green', 'servicios/expansion.html', 'Expansión', 'images/logo-iex-item.svg')
+        li
+            +block-items-service('acid-orange', 'servicios/articulacion.html', 'Articulación', 'images/logo-iex-item.svg')
+block content
+    +block-card-service('animation-1', 'b-acid-orange', 'Ecosistema de emprendimiento y consolidación empresarial')
+        | El HUB iEX responde a su compromiso científico y social por medio de la cocreación de ideas y el trabajo en conjunto con el mundo de los negocios, buscando contribuir al objetivo que apasiona a su comunidad: ofrecer opciones de crecimiento organizacional y mejorar la calidad de vida de todos.
+    +block-card-service('animation-2', 'b-acid-orange', 'La innovación parte de la transformación')
+        | Brindamos una experiencia desde la cual surge una amplia oferta de aquello que podemos llegar a construir de la mano de aliados como Tecnalia, Ruta N, Connect, Impulsa, la Cámara de Comercio, ASCUN y demás organizaciones colombianas que, como el HUB iEX, fueron diseñadas y preparadas para hacer de un plan, una realidad.
+    +block-card-service('animation-3', 'b-acid-orange', 'Economía a partir del conocimiento')
+        | Esta es nuestra apuesta por involucrar a la comunidad universitaria y empresarial en la consecución de resultados a través de su participación en procesos, relaciones, toma de decisiones e implementación de estrategias a largo plazo, trabajando conjuntamente con empresas públicas y privadas, cuyo éxito radicará en el trabajo en equipo y en el conocimiento.
+
+block video
+    section.video-hub
+        .field.field--name-video
+            .embed-responsive.embed-responsive-16by9
+                iframe.embed-responsive-item(src='https://www.youtube.com/embed/g-YScywp6AU')
+block sectores
+    section.sector-hub
+        .field.field--name-sector-title
+            |Secto<span>res</span>
+        .field.field--name-sector-subtitle
+            |Industrias <span>donde trabajamos la Innovación, Educación y Extensión</span>
+        .field.field--name-sector-body
+            |Ofrecemos servicios a cuatro segmentos de mercado: salud, educación, empresarial con fuerte énfasis en la pymes e industrias creativas. Para cada uno, creamos una propuesta de valor que nos permite comprender sus necesidades e identificar sus oportunidades de crecimiento.
+        .sectores-icon-hub
+            ul.icon-hub
+                +block-items-sector('animation-1','Pymes','images/icon-pyme.svg')
+                +block-items-sector('animation-2','Educación','images/icon-educacion.svg')
+                +block-items-sector('animation-3','Salud','images/icon-salud.svg')
+                +block-items-sector('animation-4','Industrias creativas','images/icon-icreativa.svg')
+block team
+    include pug/template-parts/banner-team.pug
+block destacado
+    section.ideascale-hub
+        .field.field--name-ideascale-image.add-animation.animation-1
+            img(src="../images/mac-ideascale.png" alt="Ideascale")
+        .field.field--name-ideascale-subtitle
+            |Conozca nuestra plataforma de e-innovación abierta
+        .field.field--name-ideascale-title
+            |Ideascale
+        .field.field--name-ideascale-body
+            |Nuestra comunidad cuenta con un instrumento para la generación y maduración de iniciativas que fortalecen los procesos y permiten ejecutar nuevas iniciativas.
+            |Aquí es posible proponer ideas innovadoras, conocer su viabilidad y aportar conocimientos e ideas frescas que fortalezcan la gestión de procesos y el talento humano.
+        a(class='ideascale-link' href='/' ) 
+            img(src="../images/arrow-black.svg" alt="Ideascale")
+        .footer-home
+            .field.field--name-footer-home-iex
+                img(src="../images/logo-iex-footer.svg" alt="Hub iEX Universidad El Bosque")
+            .field.field--name-footer-home-body
+                .field.field--name-footer-title Contáctenos
+                .field.field--name-fotter-body 
+                    span PBX.: 648 9000
+                    span Línea gratuita:
+                    span 018000 113033
+                    span Edificio Fundadores
+                    span Av. Cra. 9 No. 131 A - 02
+                    span Skype: /uelbosque
+                    label Correo electrónico:
+                    a(class='link', href='mailto:hubiexueb.unbosque.edu.co') hubiexueb.unbosque.edu.co
+            .field.field--name-footer-home-ueb
+                img(src="../images/logo-ueb-footer.svg" alt="Universidad El Bosque")
+    
+
+
+

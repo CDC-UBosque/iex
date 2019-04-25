@@ -1,0 +1,26 @@
+/* VARIABLES */
+
+// colors 
+$color-brand: #FF7D19;
+$color-acid-blue: #00fffc;
+$color-acid-yellow: #fff000;
+$color-acid-green: #00ff72;
+$color-acidlight-blue: #00ffa2;
+$color-acid-orange:#ff7d19;
+$color-acid-orange-20:#ffa866;
+$color-acid-magenta: #FF2CE6;
+$color-acid-purple: #AB00FF;
+$color-acid-aqua: #0091FF;
+
+$color-negro-100: #000000;
+$color-negro-90: lighten( $color-negro-100, 10% );
+$color-negro-70: lighten( $color-negro-100, 30% );
+$color-negro-30: lighten( $color-negro-100, 70% );
+$color-negro-20: lighten( $color-negro-100, 80% );
+$color-negro-10: lighten( $color-negro-100, 90% );
+$color-negro-5: lighten( $color-negro-100, 95% );
+$color-negro-3: lighten( $color-negro-100, 97% );
+$color-negro-0:  lighten( $color-negro-100, 100% );
+
+
+

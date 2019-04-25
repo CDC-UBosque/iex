@@ -1,0 +1,373 @@
+// Base 
+@import "../base/variables";
+@import "../base/grid";
+@import "../base/mixins";
+@import "../base/typography";
+// bootstrap
+@import "../../node_modules/bootstrap/scss/mixins";
+
+//Gloabal clases
+.b-acid-magenta{
+	border-bottom: 5px solid $color-acid-magenta;
+}
+.b-acid-purple{
+	border-bottom: 5px solid $color-acid-purple;
+}
+.b-acid-blue{
+	border-bottom: 5px solid $color-acid-aqua;
+}
+.b-acid-orange{
+	border-bottom: 5px solid $color-acid-orange;
+}
+
+%item-link {
+  color: $color-negro-90;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  &::after{
+	content: '';
+	background: $color-negro-90;
+	@include size(100%, 2px);
+	position: absolute;
+	bottom: -2px;
+	left:0;
+  }
+  &:hover{
+  	text-decoration: none;
+	color: $color-acid-orange;
+  }
+}
+
+/* ## Animation
+--------------------------------------------- */
+@include media-breakpoint-up(lg) { 
+    .add-animation {
+         transform: translate3D(0px, 150px, 0px);
+         opacity: 0;
+    }
+    .add-animation-l {
+         transform: translate3D(0px, 150px, 0px);
+         opacity: 0;
+    }
+    .add-animation.animation-1 {
+         transition: all 0.3s ease-out 0.15s;
+    }
+    .add-animation.animation-2 {
+         transition: all 0.3s ease-out 0.3s;
+    }
+    .add-animation.animation-3 {
+         transition: all 0.3s ease-out 0.45s;
+    }
+    .add-animation.animation-4 {
+         transition: all 0.3s ease-out 0.6s;
+    }
+    .add-animation.animation-5 {
+         transition: all 0.3s ease-out 0.3s;
+    }
+    .add-animation.animation-6 {
+         transition: all 0.3s ease-out 0.15s;
+    }
+    .add-animation.animate {
+         transform: translate3D(0px, 0px, 0px);
+         -webkit-transform: translate3D(0px, 0px, 0px);
+         opacity: 1;
+    }
+    .add-animation.animate.open {
+         transform: none;
+         transition: none;
+    }
+
+    .animated {
+      animation-duration: 1.5s;
+      animation-fill-mode: both;
+    }
+}
+
+//Custom classes
+.field{
+	&--name-banner-logo{
+		padding: 2.5rem 0 0 0;
+	}
+	&--name-hero-body{
+		//padding: 2.5rem 0 0 2.5rem;
+	}
+	&--name-hero-title{
+		@include font-set($font-ag-regular, $font-size-70, $color-acid-orange, 0,  1);
+		text-transform: uppercase;
+		span{
+			display: inline-block;
+		}
+	}
+	&--name-hero-subtitle{
+		@include font-set($font-lt-regular, $font-size-22, white, 2px,  1);
+		margin-bottom: 1rem;
+		margin-left: -5rem;
+	}
+	&--name-link{
+		@include font-set($font-ag-bold, $font-size-base, $color-negro-90, 0,  1);
+		text-transform: uppercase;
+	}
+	&--name-card-title{
+		@include font-set($font-ag-light, $font-size-30, $color-negro-90, 0,  1);
+		align-self: end;
+	}
+	&--name-card-body{
+		@include font-set($font-lt-regular, $font-size-14, $color-negro-70, 2px,  1.2);
+	}
+	&--name-sector-title{
+		@include font-set($font-ag-regular, $font-size-50, $color-acid-orange, 2px,  1);
+		text-transform: uppercase;
+		span{
+			display: block;
+		}
+	}
+	&--name-sector-subtitle{
+		@include font-set($font-ag-regular, $font-size-22, $color-negro-90, 2px,  1);
+		border-right: 1px solid $color-negro-10;
+		margin-top: 4rem;
+
+	}
+	&--name-sector-body{
+		@include font-set($font-lt-regular, $font-size-13, $color-negro-90, 2px,  1.2);
+		border-right: 1px solid $color-negro-10;
+	}
+	&--name-item-sector{
+		span{
+			@include font-set($font-lt-regular, $font-size-14, $color-negro-70, 0,  1.2);
+		}
+	}
+	&--name-team-title{
+		@include font-set($font-ag-regular, $font-size-50, $color-acid-orange, 0,  1);
+		text-transform: uppercase;
+		span{
+			display: inline-block;
+		}
+	}
+	&--name-team-subtitle{
+		@include font-set($font-lt-regular, $font-size-22, white, 2px,  1);
+		margin-left: -3rem;
+		+img{
+			margin-top: 1rem;
+		}
+	}
+	&--name-ideascale-subtitle{
+		@include font-set($font-ag-regular, $font-size-30, $color-negro-70, 1px,  1);
+		margin-top: 0rem;
+	}
+	&--name-ideascale-title{
+		@include font-set($font-ag-black, $font-size-50, $color-acid-orange, 1px,  1);
+		text-transform: uppercase;
+		margin-top: 1rem
+	}
+	&--name-ideascale-body{
+		@include font-set($font-lt-regular, $font-size-14, $color-negro-70, 0,  1.2);
+		margin-top: 3rem;
+		padding-top: 2rem;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			background: $color-negro-70;
+			@include size(70%, 1px);
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+	}
+	&--name-footer-home-iex{
+		margin-right: 3rem;
+		img{
+			@include img-fluid();
+		}
+	}
+	&--name-footer-home-ueb{
+		img{
+			@include img-fluid();
+		}
+	}
+	&--name-footer-home-body{
+		margin-right: 2rem
+	}
+
+	&--name-ideascale-image{
+		img{
+			@include img-fluid();
+		}
+	}
+}
+// Contenedores
+.nav-services{
+	padding:0;
+	margin-bottom: 0;
+	li{
+		list-style: none;
+		text-align: center;
+		a{
+			display: block;
+			padding: 1rem;
+			height: 100%;
+			img{
+				transform: scale(1);
+				transition: .3s ease-in-out;
+				padding-right: 20px;
+			}
+			&:hover{
+				text-decoration: none;
+				color: $color-negro-90;
+				img{
+					transform: scale(1.1);
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}
+.content-card{
+	background: $color-negro-3;
+	padding: 3.438rem 0;
+	.card-service{
+		margin:0 1rem;
+		@media (min-width: 1600px) {
+			margin:0 2rem;
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: 2rem;
+		}
+
+	}
+	.card-title{
+		background: $color-negro-0;
+		padding: 3rem 1rem 1.8rem;
+		min-height: 200px;
+		@include display-grid;
+		@include media-breakpoint-down(md) {
+			min-height: inherit;
+		}
+	}
+}
+.video-hub{
+	padding:3.438rem 0; 
+	background: $color-acid-orange url('../images/bg-video.svg') no-repeat; 
+}
+.sector-hub{
+	padding:3.438rem 0; 
+	.icon-hub{
+		padding:0;
+		margin-bottom: 0;
+		li{
+			list-style: none;
+			text-align: center;
+			@include display-grid;
+			.item-sector{
+				align-self: center;
+				margin-top: 1rem;
+				span{
+					display: block;
+					margin-bottom: 0.5rem;
+				}	
+			}
+		}
+	}
+}
+.ideascale-hub{
+	padding:3.438rem 0; 
+	position: relative;
+	&::before{
+		content: '';
+		position: absolute;
+		background: $color-negro-5;
+		@include size(100%, 60%);
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+	.ideascale-link{
+		margin-top: 2rem; display: inline-block;
+		transition: .3s ease-in-out;
+		padding-left: 0px;
+		&:hover{
+			padding-left: 30px;
+		}
+	}
+}
+.footer-home{
+	//padding: 2.5rem 0 0 2.5rem;
+	label{
+		margin-top: 1rem;
+		+a{
+			@extend %item-link;
+		}
+	}
+
+}
+
+
+// Responsive
+
+@include media-breakpoint-down(md) {
+	.field{
+		&--name-hero-title{
+			font-size: $font-size-50;
+			span{
+				display: inline-block;
+			}
+		}
+		&--name-hero-subtitle{
+			margin-left: 0;
+		}
+		&--name-sector-title{
+			span{
+				display: inline-block;
+			}
+		}
+		&--name-sector-subtitle{
+			margin-top: 1rem;
+			border-right: 0;
+		}
+		&--name-sector-body{
+			padding-top: 1rem;
+			border-right: 0;
+		}
+		&--name-team-subtitle{
+			margin-left: 0;
+		}
+		&--name-ideascale-body{
+			margin-top: 0;
+			padding-top: 2rem;
+			&::before{
+				height: 0;
+			}
+		}
+		&--name-footer-home-body{
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+	}
+	.ideascale-link{
+		margin-bottom: 3rem;
+	}
+	.ideascale-hub{
+		&::before{
+			@include size(100%, 56%);
+		}
+	}
+
+}
+@include media-breakpoint-only(lg) {
+	.field{
+		&--name-sector-title{
+			span{
+				display: inline;
+			}
+		}
+		&--name-team-title{
+			span{
+				display: inline;
+			}
+		}
+		&--name-team-subtitle{
+			margin-left: 1rem;
+		}
+	}
+}
