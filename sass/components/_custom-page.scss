@@ -252,13 +252,76 @@
 		}
 	}
 	&--name-owl-carousel{
+		position: relative;
 		img{
 			min-height: 660px;
 			max-height: 660px;
     		object-fit: cover;
     		width: 100%;
 		}
+		#carousel-team{
+			margin-top: 160px;
+			img{
+				min-height: 500px;
+				max-height: 500px;
+				object-fit: cover;
+				width: 100%;
+				@include media-breakpoint-down(md) {
+					min-height: 300px;
+					max-height: 300px;
+				}
+			}
+			@include media-breakpoint-up(md) {
+				.owl-nav{
+					position: absolute;
+					right: 2rem;
+					margin-top: -4rem;
+					z-index: 0;
+					background: $color-acid-orange;
+					button{
+						color: white;
+						padding: 0.3rem 0.5rem !important;
+					}
+				}
+				.owl-dots{
+					margin-top: 1rem;
+				}
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: 0;
+			}
+		}
+		#carousel-iex{
+			@include media-breakpoint-up(md) {
+				.owl-nav{
+					position: absolute;
+					right: 2rem;
+					margin-top: -4rem;
+					z-index: 0;
+					background: $color-acid-orange;
+					button{
+						color: white;
+						padding: 0.3rem 0.5rem !important;
+					}
+				}
+				.owl-dots{
+					margin-top: 1rem;
+				}
+			}
+		}
 	}
+	&--name-body-team{
+		background: $color-negro-90;
+		padding:3rem 2rem 2rem 2rem;
+		&--title{
+			@include font-set($font-ag-regular, $font-size-50, $color-negro-0, 0,  1);
+		}
+		&--cv{
+			@include font-set($font-lt-regular, $font-size-base, $color-negro-0, 0,  1.1);
+			margin-top: 1rem;
+		}
+	}
+
 }
 
 // Contenedores
@@ -272,8 +335,6 @@
 	}
 
 }
-
-
 
 // Bootstrap custom
 .accordion{
@@ -379,6 +440,8 @@
 	}
 }
 
+
+
 // Responsive
 @include media-breakpoint-down(md) {
 	.field{
@@ -396,11 +459,24 @@
 		}
 		&--name-banner-image{
 			img{
-				min-height: 500px;
+				min-height: 400px;
 			}
 		}
 		&--name-texto-destacado{
 			padding: 1rem;
+		}
+		&--name-banner-title{
+			font-size: $font-size-50;
+		}
+		&--name-img-service{
+			img{
+				min-height: 400px;
+			}
+		}
+		&--name-owl-carousel{
+			img{
+				min-height: 360px;
+			}
 		}
 	}
 	.sidebar-footer{

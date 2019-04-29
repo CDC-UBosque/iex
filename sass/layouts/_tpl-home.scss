@@ -98,7 +98,7 @@
 		}
 	}
 }
-.block-banner{
+.block-banner, .block-banner-hero{
 	@include grid-child-column (1, 13);
 	//@include grid-child-row (6, 6);
 	a{
@@ -155,7 +155,7 @@
 			@include grid-child-row (1, 1);
 		}
 		@include media-breakpoint-down(md) {
-			@include grid-child-column (2, 12);
+			@include grid-child-column (1, 13);
 		}
 	}
 	&--name-sector-title{
@@ -177,6 +177,10 @@
 		}
 	}
 	&--name-banner-image{
+		@include grid-child-column (1, 14);
+		@include grid-child-row (1, 1);
+	}
+	&--name-hero-particles{
 		@include grid-child-column (1, 14);
 		@include grid-child-row (1, 1);
 	}

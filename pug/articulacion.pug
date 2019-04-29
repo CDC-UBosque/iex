@@ -7,23 +7,27 @@ block nabvar
     include template-parts/navbar.pug
 block sidebar
     +block-sidebar('acid-orange', 'Articulación')
-        | Apoyamos  con expertos en psicología, investigación, diseño, gerencia y desarrollo sostenible,  ofrecemos Programas de educación no formal, cursos flexibles y capacitación, actualización y profundización del conocimiento interno de la empresa 
-        Consolidamos la programación  y administración de bases de datos de su empresa.
+        | Nuestro HUB-iEX tiene proyección estratégica por su ubicación, desde la cual nos articulamos para ser la mano derecha del sector público y el mundo empresarial establecido en la zona norte de la ciudad y en los alrededores de Bogotá, una región con alto potencial de desarrollo y expansión.
 
 block sidebar_footer
     include template-parts/footer-sidebar.pug
 
 block content
     .field.field--name-owl-carousel
-        .owl-carousel.owl-theme.loop
+        #carousel-iex.owl-carousel.owl-theme.loop
             .item  
-                img(src="../images/slider/img-default-service.jpg" alt="Hub iEX Universidad El Bosque")
+                img(src="../images/slider/iex0.jpg" alt="Hub iEX Universidad El Bosque")
             .item  
-                img(src="../images/slider/img-default-service.jpg" alt="Hub iEX Universidad El Bosque")
+                img(src="../images/slider/iex1.jpg" alt="Hub iEX Universidad El Bosque")
+            .item  
+                img(src="../images/slider/iex2.jpg" alt="Hub iEX Universidad El Bosque")
             .item 
-                img(src="../images/slider/img-default-service.jpg" alt="Hub iEX Universidad El Bosque")
+                img(src="../images/slider/iex3.jpg" alt="Hub iEX Universidad El Bosque")
+            .item 
+                img(src="../images/slider/iex4.jpg" alt="Hub iEX Universidad El Bosque")
+
     .field.field--name-texto-destacado
-        p Nuestra diversidad permite entenderlo no solo en un área, permitiendonos dar soluciones integrales para el desarrollo  sostenible de su organización, hired by the cinematic genius – is the captive of embarrassingly personalized and disturbingly intrusive, mostly outdoor, interactive advertising.
+        p Aquí encontrará laboratorios, tecnología, acompañamiento para la ideación y creación de nuevos productos y apoyo para el desarrollo efectivo de todos sus proyectos. Deseamos el crecimiento del talento humano de la ciudad, incorporando mejores prácticas, generando conocimiento y realizando procesos de innovación, todo ello, con el fin de ser más productivos.
     .field.field--name-next-service
         a(class='' href='startup.html' ) 
             img(src="../images/arrow-black.svg" alt="Siguiente")

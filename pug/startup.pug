@@ -7,25 +7,24 @@ block nabvar
     include template-parts/navbar.pug
 block sidebar
     +block-sidebar('acid-yellow', 'Start Up')
-        | Apoyamos  con expertos en psicología, investigación, diseño, gerencia y desarrollo sostenible,  ofrecemos Programas de educación no formal, cursos flexibles y capacitación, actualización y profundización del conocimiento interno de la empresa 
-        Consolidamos la programación  y administración de bases de datos de su empresa.
+        | Contamos con expertos en administración de empresas, negocios digitales, economía naranja, ejecución de proyectos y tecnología para la etapa de inicial de su negocio. Junto a nosotros, podrá diseñar e implementar sistemas de información, innovar, comunicar con efectividad y recibir formación para fortalecer su perfil profesional y enriquecer su portafolio.
 
 block sidebar_footer
     include template-parts/footer-sidebar.pug
 
 block content
     .field.field--name-img-service
-        img(src="../images/img-default-service.jpg", class="img-fluid", alt="Responsive image")
+        img(src="../images/startup.jpg", class="img-fluid", alt="Responsive image")
     .field.field--name-texto-destacado
-        p Nuestra diversidad permite entenderlo no solo en un área, permitiendonos dar soluciones integrales para el desarrollo  sostenible de su organización, hired by the cinematic genius – is the captive of embarrassingly personalized and disturbingly intrusive, mostly outdoor, interactive advertising.
+        p Somos un espacio para la integración de la academia con el sector público y privado a través de la formación, investigación aplicada y la innovación. Nuestra colaboración se caracteriza por ser integral e interdisciplinaria soportada en el talento humano y la experiencia acumulada de la Universidad El Bosque.
 
     +accordion("Example")
-        +accordion-item-primary("Collapsible Group Item #1","0ne","true")
-            p  This is first accordion content
-        +accordion-item-default("Collapsible Group Item #2","Two")
-            |  This is second accordion content
-        +accordion-item-default("Collapsible Group Item #3","Three")
-            |  This is third accordion content
+        +accordion-item-primary("ECOSISTEMA DE EMPRENDIMIENTO Y CONSOLIDACIÓN EMPRESARIAL","0ne","true")
+            p  Respondemos a nuestro compromiso científico y social por medio de la cocreación de ideas y el trabajo en conjunto con el mundo de los negocios, buscando contribuir al objetivo que apasiona a nuestros líderes: ofrecer opciones de crecimiento organizacional y el fortalecimiento del conocimiento implícito en cada modelo de negocio.
+        +accordion-item-default("LA INNOVACIÓN PARTE DE LA TRANSFORMACIÓN","Two")
+            |  Brindamos una experiencia desde la cual surge una amplia oferta de aquello que podemos llegar a construir de la mano de aliados como Tecnalia y demás organizaciones que, como el HUB iEX, fueron diseñadas y preparadas para hacer de un plan una realidad.
+        +accordion-item-default("ECONOMÍA A PARTIR DEL CONOCIMIENTO","Three")
+            |  Esta es nuestra apuesta por involucrar a la comunidad universitaria y empresarial en la consecución de resultados a través de su participación en procesos, toma de decisiones e implementación de acciones a largo plazo, desarrollando estrategias con empresas públicas y privadas, cuyo éxito radicará en el trabajo en equipo y en el conocimiento.
     .field.field--name-next-service
         a(class='' href='consolidacion.html' ) 
             img(src="../images/arrow-black.svg" alt="Siguiente")
