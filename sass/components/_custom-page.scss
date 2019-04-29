@@ -290,6 +290,26 @@
 			@include media-breakpoint-down(md) {
 				margin-top: 0;
 			}
+			.owl-thumbs{
+				.owl-thumb-item{
+				    border: 0;
+				    @include size(50px);
+				    margin-right: 1rem;
+					&.active{
+						opacity: .5;
+						img{
+							border:5px solid $color-acid-orange;
+						}
+					}
+					img{
+						border-radius: 50%;
+						@include size(50px);
+					    min-height: inherit;
+					    max-height: inherit;
+					    border: 5px solid #dadada;
+					}
+				}
+			}
 		}
 		#carousel-iex{
 			@include media-breakpoint-up(md) {
@@ -440,7 +460,35 @@
 	}
 }
 
-
+#carousel-team{
+	@media (min-width: 992px) and (max-width: 1401px) {
+		margin-top: 130px !important;
+	}
+	.owl-thumbs{
+		//@include grid-child-row (1, 1);
+		//position: absolute;
+		margin-top: 1rem;
+		text-align: center;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+		button{
+			background: white;
+			&:focus{
+				outline: 0 !important;;
+			}
+			img:focus{
+				outline: 0 !important;;
+			}
+		}
+	}
+	.owl-dots{
+		display: none;
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+	}
+}
 
 // Responsive
 @include media-breakpoint-down(md) {
