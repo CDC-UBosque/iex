@@ -152,7 +152,7 @@
 	}
 	&--name-team-subtitle{
 		@include font-set($font-lt-regular, $font-size-22, white, 2px,  1);
-		margin-left: -3rem;
+		margin-left: 1rem;
 		+img{
 			margin-top: 1rem;
 		}
@@ -200,6 +200,18 @@
 		img{
 			@include img-fluid();
 		}
+	}
+	&--name-hero-arrow{
+		margin-left: -6rem;
+		@include media-breakpoint-down(md) {
+			margin-left: 0rem;
+			margin-top: 2rem;
+		}
+
+	}
+	&--name-hero-360{
+		@include font-set($font-ag-regular, $font-size-30, $color-acid-orange, 0,  1);
+		
 	}
 }
 // Contenedores
@@ -284,6 +296,27 @@
 	@include media-breakpoint-down(md) {
 		height: 100vh;
 	}
+	>a{
+		position: relative;
+		//height: 100vh;
+		&::before{
+			content: '';
+			position: absolute;
+    		top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    		left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    		transform: translate(-50%, -50%);
+			@include size(102px);
+			background: url('../images/play-icon.svg');
+			z-index:2;
+			opacity: .5
+		}
+		&:hover{
+			&::before{
+				opacity: .7
+			}
+		}
+	}
 	.field--name-banner-image{
 		img{
 			height:calc(100vh - 84px);
@@ -294,7 +327,7 @@
 			}
 		}
 		&::before{
-			    opacity: .3;
+			    opacity: .4;
 		}
 	}
 

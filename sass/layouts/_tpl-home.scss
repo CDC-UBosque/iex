@@ -208,6 +208,17 @@
 		@include grid-child-row (1, 1);
 		align-self: end;
 	}
+	&--name-hero-arrow{
+		@include grid-child-column (2,  2);
+		@include grid-child-row (2, 2);
+		align-self: end;
+	}
+	&--name-hero-360{
+		@include grid-child-column (2, 10);
+		@include grid-child-row (2, 2);
+		align-self: end;
+
+	}
 	&--name-ideascale-subtitle{
 		@include grid-child-column (3, 8);
 		@include grid-child-row (1, 1);
@@ -339,6 +350,26 @@
 			@include grid-child-column (3, 5);
 			@include grid-child-row (1, 1);
 		}
+		&--name-hero-arrow{
+			@include grid-child-column (1,  1);
+			@include grid-child-row (3, 3);
+			align-self: end;
+		}
+		&--name-hero-360{
+			@include grid-child-column (2, 10);
+			@include grid-child-row (3, 3);
+			align-self: end;
+
+		}
 	}
 }
+@include media-breakpoint-down(xs) { 
+	.field{
+		&--name-hero-360{
+			@include grid-child-column (1, 10);
+			@include grid-child-row (4, 4);
+			align-self: end;
+		}
+	}
+ }
 
