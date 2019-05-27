@@ -1,9 +1,3 @@
-// Base 
-@import "../base/variables";
-@import "../base/grid";
-@import "../base/mixins";
-@import "../base/typography";
-// bootstrap
 @import "../../node_modules/bootstrap/scss/mixins";
 
 //Gloabal clases
@@ -270,6 +264,28 @@
 .video-hub{
 	padding:3.438rem 0; 
 	background: $color-acid-orange url('../images/bg-video.svg') no-repeat; 
+
+	#sync1 .item, #sync1 .item-video{
+	    //background: #0c83e7;
+		height: 537px;
+	    //border-radius: 3px;
+	    text-align: center;
+	}
+	#sync2 .item{
+	    //background: #C9C9C9;
+	    padding: 0px;
+	    color: #FFF;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	#sync2 .item h1{
+	  @include font-set($font-ag-bold, $font-size-14, $color-negro-0, 0,  1);
+	}
+	#sync2 .synced .item{
+	  //background: #0c83e7;
+	  border-bottom: 2px solid white;
+	}
+
 }
 .sector-hub{
 	padding:3.438rem 0; 

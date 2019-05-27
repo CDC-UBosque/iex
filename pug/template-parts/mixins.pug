@@ -37,7 +37,11 @@ mixin block-sidebar(clasecolor, titulo)
 				img(src="../images/icon-facebook.svg" alt="facebook")
 			a(href='google.com') 
 				img(src="../images/icon-linkedin.svg" alt="twitter")
-		
+
+//- Bloque slider video
+mixin block-slider-video(linkUrlvideo)
+	.item-video
+		a.owl-video.embed-responsive-item(href=linkUrlvideo)
 
 //****** BOOTSTRAP 4.3  MIXINS
 
