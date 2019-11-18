@@ -263,8 +263,8 @@
 				object-fit: cover;
 				width: 100%;
 				@include media-breakpoint-down(md) {
-					min-height: 300px;
-					max-height: 300px;
+					//min-height: 300px;
+					//max-height: 300px;
 				}
 			}
 			@include media-breakpoint-up(md) {

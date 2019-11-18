@@ -27,16 +27,16 @@ mixin block-sidebar(clasecolor, titulo)
 	div(class=clasecolor class=['block', 'block-sidebar'])
 		div.field.field--name-logo
 			a(href='/') 
-				img(src="../images/logo-iex-dark.svg" alt="logo")
+				img(src="/images/logo-iex-dark.svg" alt="logo")
 		div.field.field--name-title 
 			h2= titulo
 		div.field.field--name-desc 
 			block
 		div.field.field--name-redes 
-			a(href='google.com') 
-				img(src="../images/icon-facebook.svg" alt="facebook")
-			a(href='google.com') 
-				img(src="../images/icon-linkedin.svg" alt="twitter")
+			a(href='https://www.facebook.com/universidadelbosque' target="_blank") 
+				img(src="/images/icon-facebook.svg" alt="facebook")
+			a(href='https://www.linkedin.com/edu/universidad-el-bosque-11599' target='_blank') 
+				img(src="/images/icon-linkedin.svg" alt="twitter")
 
 //- Bloque slider video
 mixin block-slider-video(linkUrlvideo)

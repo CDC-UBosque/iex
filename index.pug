@@ -11,13 +11,13 @@ block hero
 block nav_services
     ul.nav-services
         li
-            +block-items-service('acid-yellow', 'servicios/startup.html', 'startup', 'images/logo-iex-item.svg')
+            +block-items-service('acid-yellow', 'servicios/startup.html', 'startup', '/images/logo-iex-item.svg')
         li
-            +block-items-service('acid-blue', 'servicios/consolidacion.html', 'Consolidación', 'images/logo-iex-item.svg')
+            +block-items-service('acid-blue', 'servicios/consolidacion.html', 'Consolidación', '/images/logo-iex-item.svg')
         li
-            +block-items-service('acid-green', 'servicios/expansion.html', 'Expansión', 'images/logo-iex-item.svg')
+            +block-items-service('acid-green', 'servicios/expansion.html', 'Expansión', '/images/logo-iex-item.svg')
         li
-            +block-items-service('acid-orange', 'servicios/articulacion.html', 'Articulación', 'images/logo-iex-item.svg')
+            +block-items-service('acid-orange', 'servicios/articulacion.html', 'Articulación', '/images/logo-iex-item.svg')
 block content
     +block-card-service('animation-1', 'b-acid-orange', 'Ecosistema de emprendimiento y consolidación empresarial')
         | Respondemos a nuestro compromiso científico y social por medio de la cocreación de ideas y el trabajo en conjunto con el mundo de los negocios, buscando contribuir al objetivo que apasiona a nuestros líderes: ofrecer opciones de crecimiento organizacional y el fortalecimiento del conocimiento implícito en cada modelo de negocio.
@@ -40,16 +40,16 @@ block sectores
             |Estamos enfocados en cuatro segmentos de mercado: salud, educación, industrias creativas y sector empresarial con fuerte énfasis en la pymes. Para cada uno, creamos una propuesta de valor que nos permite comprender sus necesidades e identificar sus oportunidades de crecimiento.
         .sectores-icon-hub
             ul.icon-hub
-                +block-items-sector('animation-1','Empresas','images/icon-pyme.svg')
-                +block-items-sector('animation-2','Educación','images/icon-educacion.svg')
-                +block-items-sector('animation-3','Salud','images/icon-salud.svg')
-                +block-items-sector('animation-4','Industrias creativas','images/icon-icreativa.svg')
+                +block-items-sector('animation-1','Empresas','/images/icon-pyme.svg')
+                +block-items-sector('animation-2','Educación','/images/icon-educacion.svg')
+                +block-items-sector('animation-3','Salud','/images/icon-salud.svg')
+                +block-items-sector('animation-4','Industrias creativas','/images/icon-icreativa.svg')
 block team
     include pug/template-parts/banner-team.pug
 block destacado
     section.ideascale-hub
         .field.field--name-ideascale-image.add-animation.animation-1
-            img(src="../images/mac-ideascale.png" alt="Ideascale")
+            img(src="/images/mac-ideascale.png" alt="Ideascale")
         .field.field--name-ideascale-subtitle
             |Conozca nuestra plataforma de e-innovación abierta
         .field.field--name-ideascale-title.add-animation.animation-1
@@ -58,10 +58,10 @@ block destacado
             |Nuestra comunidad cuenta con un instrumento para la generación y crecimientio de iniciativas que fortalecen los procesos y permiten ejecutar nuevas iniciativas. 
             | Aquí es posible proponer ideas innovadoras, conocer su viabilidad y aportar conocimientos e ideas frescas que fortalezcan la gestión de procesos y el talento humano.
         a(class='ideascale-link add-animation animation-3' href='https://unbosque.ideascale.com' ) 
-            img(src="../images/arrow-black.svg" alt="Ideascale")
+            img(src="/images/arrow-black.svg" alt="Ideascale")
         .footer-home.add-animation.animation-3
             .field.field--name-footer-home-iex
-                img(src="../images/logo-iex-footer.svg" alt="Hub iEX Universidad El Bosque")
+                img(src="/images/logo-iex-footer.svg" alt="Hub iEX Universidad El Bosque")
             .field.field--name-footer-home-body
                 .field.field--name-footer-title Contáctenos
                 .field.field--name-fotter-body 
@@ -73,7 +73,7 @@ block destacado
                     label Como llegar:
                     a(class='link', href='https://goo.gl/maps/B6vBKJWwB8W991WL8 ', target='_blank') Ir a ubicación 
             .field.field--name-footer-home-ueb
-                img(src="../images/logo-ueb-footer.svg" alt="Universidad El Bosque")
+                img(src="/images/logo-ueb-footer.svg" alt="Universidad El Bosque")
 
 
 
